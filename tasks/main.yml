@@ -1,0 +1,21 @@
+---
+# tasks file for auto_update
+- name: install packages
+  package:
+    name: "{{ auto_update_packages }}"
+    state: present
+  register: auto_update_install_packages
+  until: auto_update_install_packages is succeeded
+  retries: 3
+
+- name: configure auto_update
+  template:
+    src: "{{ auto_update_config_file }}.j2"
+    dest: "{{ auto_update_config_directory }}/{{ auto_update_config_file }}"
+
+- name: start and enable auto_update
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: yes
+  loop: "{{ auto_update_services }}"

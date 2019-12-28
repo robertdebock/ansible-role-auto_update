@@ -1,0 +1,8 @@
+---
+# handlers file for auto_update
+- name: restart auto_update
+  service:
+    name: "{{ auto_update_service }}"
+    state: restarted
+  when:
+    - ansible_virtualization_type != "docker"
