@@ -14,12 +14,9 @@ jobs:
     strategy:
       matrix:
         image:
-          - alpine
-          - archlinux
           - debian
           - centos
           - fedora
-          - opensuse
           - ubuntu
         tag:
           - 1
