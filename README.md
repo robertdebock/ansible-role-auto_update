@@ -2,7 +2,7 @@ auto_update
 =========
 
 <img src="https://docs.ansible.com/ansible-tower/3.2.4/html_ja/installandreference/_static/images/logo_invert.png" width="10%" height="10%" alt="Ansible logo" align="right"/>
-<a href="https://travis-ci.org/robertdebock/ansible-role-auto_update"> <img src="https://travis-ci.org/robertdebock/ansible-role-auto_update.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/"/> <img src="https://img.shields.io/ansible/quality/"/>
+<a href="https://travis-ci.org/robertdebock/ansible-role-auto_update"> <img src="https://travis-ci.org/robertdebock/ansible-role-auto_update.svg?branch=master" alt="Build status"/></a> <img src="https://img.shields.io/ansible/role/d/45501"/> <img src="https://img.shields.io/ansible/quality/45501"/>
 
 <a href="https://github.com/robertdebock/ansible-role-auto_update/actions"><img src="https://github.com/robertdebock/ansible-role-auto_update/workflows/GitHub%20Action/badge.svg"/></a>
 
