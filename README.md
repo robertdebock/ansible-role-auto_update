@@ -5,7 +5,7 @@ Install and configure automatic package updates on your system.
 
 |Travis|GitHub|Quality|Downloads|
 |------|------|-------|---------|
-|[![travis](https://travis-ci.org/robertdebock/ansible-role-auto_update.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-auto_update)|[![github](https://github.com/robertdebock/ansible-role-auto_update/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-auto_update/actions)|![quality](https://img.shields.io/ansible/quality/45501)|![downloads](https://img.shields.io/ansible/role/d/45501)|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-auto_update.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-auto_update)|[![github](https://github.com/robertdebock/ansible-role-auto_update/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-auto_update/actions)|[![quality](https://img.shields.io/ansible/quality/45501)](https://galaxy.ansible.com/robertdebock/auto_update)|[![downloads](https://img.shields.io/ansible/role/d/45501)](https://galaxy.ansible.com/robertdebock/auto_update)|
 
 Example Playbook
 ----------------
@@ -122,7 +122,7 @@ The minimum version of Ansible required is 2.7 but tests have been done to:
 Testing
 -------
 
-[Unit tests](https://travis-ci.org/robertdebock/ansible-role-auto_update) are done on every commit, pull request, release and periodically.
+[Unit tests](https://travis-ci.com/robertdebock/ansible-role-auto_update) are done on every commit, pull request, release and periodically.
 
 If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-auto_update/issues)
 
