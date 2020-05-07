@@ -20,7 +20,9 @@ galaxy_info:
         - all
     - name: Ubuntu
       versions:
-        - all
+        - focal
+        - bionic
+        - xenial
 
   galaxy_tags:
     - autoupdate
