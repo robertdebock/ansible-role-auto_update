@@ -7,9 +7,6 @@
   package:
     name: "{{ auto_update_packages }}"
     state: present
-  register: auto_update_install_packages
-  until: auto_update_install_packages is succeeded
-  retries: 3
 
 - name: configure auto_update
   template:
