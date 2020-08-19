@@ -5,24 +5,28 @@
       - auto_update_update_cmd is defined
       - auto_update_update_cmd | length > 0
       - auto_update_update_cmd in ["default", "security", "security-severity:Critial", "minimal", "minimal-security", "minimal-security-severity:Critical"]
+    quiet: yes
 
 - name: test if auto_update_message is set correctly
   assert:
     that:
       - auto_update_message is defined
       - auto_update_message | type_debug == "bool"
+    quiet: yes
 
 - name: test if auto_update_download_updates is set correctly
   assert:
     that:
       - auto_update_download_updates is defined
       - auto_update_download_updates | type_debug == "bool"
+    quiet: yes
 
 - name: test if auto_update_apply_updates is set correctly
   assert:
     that:
       - auto_update_apply_updates is defined
       - auto_update_apply_updates | type_debug == "bool"
+    quiet: yes
 
 - name: test if auto_update_random_sleep is set correctly
   assert:
@@ -30,3 +34,4 @@
       - auto_update_random_sleep is defined
       - auto_update_random_sleep | int
       - auto_update_random_sleep | int >= 0
+    quiet: yes
