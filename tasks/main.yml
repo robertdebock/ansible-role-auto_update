@@ -12,6 +12,7 @@
   template:
     src: "{{ auto_update_config_file }}.j2"
     dest: "{{ auto_update_config_directory }}/{{ auto_update_config_file }}"
+    mode: "0644"
 
 - name: start and enable auto_update
   service:
