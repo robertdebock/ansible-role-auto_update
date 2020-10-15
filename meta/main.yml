@@ -28,6 +28,6 @@ galaxy_info:
 
   galaxy_tags:
     - autoupdate
-    - centos
+    - security
 
 dependencies: []

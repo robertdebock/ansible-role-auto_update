@@ -5,3 +5,4 @@
 repository:
   description: Install and configure automatic package updates on your system.
   homepage: https://robertdebock.nl/
+  topics: autoupdate, security, hacktoberfest
