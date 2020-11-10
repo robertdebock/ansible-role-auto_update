@@ -4,7 +4,7 @@
     that:
       - auto_update_update_cmd is defined
       - auto_update_update_cmd | length > 0
-      - auto_update_update_cmd in ["default", "security", "security-severity:Critial", "minimal", "minimal-security", "minimal-security-severity:Critical"]
+      - auto_update_update_cmd in [ "default", "security", "security-severity:Critial", "minimal", "minimal-security", "minimal-security-severity:Critical" ]
     quiet: yes
 
 - name: test if auto_update_message is set correctly
