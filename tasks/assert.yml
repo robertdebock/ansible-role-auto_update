@@ -32,5 +32,5 @@
     that:
       - auto_update_random_sleep is defined
       - auto_update_random_sleep is number
-      - auto_update_random_sleep | int >= 0
+      - auto_update_random_sleep >= 0
     quiet: yes
