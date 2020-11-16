@@ -11,21 +11,21 @@
   assert:
     that:
       - auto_update_message is defined
-      - auto_update_message | type_debug == "bool"
+      - auto_update_message is boolean
     quiet: yes
 
 - name: test if auto_update_download_updates is set correctly
   assert:
     that:
       - auto_update_download_updates is defined
-      - auto_update_download_updates | type_debug == "bool"
+      - auto_update_download_updates is boolean
     quiet: yes
 
 - name: test if auto_update_apply_updates is set correctly
   assert:
     that:
       - auto_update_apply_updates is defined
-      - auto_update_apply_updates | type_debug == "bool"
+      - auto_update_apply_updates is boolean
     quiet: yes
 
 - name: test if auto_update_random_sleep is set correctly
