@@ -1,4 +1,5 @@
 ---
+
 - name: test if auto_update_update_cmd is set correctly
   assert:
     that:
