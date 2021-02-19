@@ -1,7 +1,7 @@
 ---
 
 - name: test if auto_update_update_cmd is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - auto_update_update_cmd is defined
       - auto_update_update_cmd is string
@@ -9,28 +9,28 @@
     quiet: yes
 
 - name: test if auto_update_message is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - auto_update_message is defined
       - auto_update_message is boolean
     quiet: yes
 
 - name: test if auto_update_download_updates is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - auto_update_download_updates is defined
       - auto_update_download_updates is boolean
     quiet: yes
 
 - name: test if auto_update_apply_updates is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - auto_update_apply_updates is defined
       - auto_update_apply_updates is boolean
     quiet: yes
 
 - name: test if auto_update_random_sleep is set correctly
-  assert:
+  ansible.builtin.assert:
     that:
       - auto_update_random_sleep is defined
       - auto_update_random_sleep is number
