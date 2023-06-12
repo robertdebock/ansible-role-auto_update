@@ -5,4 +5,4 @@
 repository:
   description: Install and configure automatic package updates on your system.
   homepage: https://robertdebock.nl/
-  topics: autoupdate, security, ansible, molecule, tox, playbook
+  topics: autoupdate, security, system, ansible, molecule, tox, playbook
