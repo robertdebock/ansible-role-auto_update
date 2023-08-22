@@ -17,3 +17,7 @@ auto_update_apply_updates: no
 
 # Maximum amout of time to randomly sleep, in minutes.
 auto_update_random_sleep: 360
+
+# (RedHat like systems only) How a message should be emit results of updates. The value is a comma seperated string with
+# with one or more of these choices: email, stdio, motd.
+auto_update_message_emitters: "email, stdio, motd"
