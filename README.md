@@ -1,4 +1,4 @@
-# Ansible role [auto_update](#auto_update)
+# [Ansible role auto_update](#auto_update)
 
 Install and configure automatic package updates on your system.
 
