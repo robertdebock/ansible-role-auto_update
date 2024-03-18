@@ -14,8 +14,8 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
     - role: robertdebock.auto_update
@@ -27,8 +27,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
@@ -49,14 +49,14 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 auto_update_update_cmd: default
 
 # (RedHat like systems only) Whether a message should be emitted when updates are available, were downloaded, or applied.
-auto_update_message: no
+auto_update_message: false
 
 # Whether updates should be downloaded when they are available.
-auto_update_download_updates: yes
+auto_update_download_updates: true
 
 # Whether updates should be applied when they are available.  Note
 # that download_updates must also be yes for the update to be applied.
-auto_update_apply_updates: no
+auto_update_apply_updates: false
 
 # Maximum amout of time to randomly sleep, in minutes.
 auto_update_random_sleep: 360
