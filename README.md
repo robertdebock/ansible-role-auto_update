@@ -1,10 +1,10 @@
-# [auto_update](#auto_update)
+# [Ansible role auto_update](#auto_update)
 
 Install and configure automatic package updates on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-auto_update/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-auto_update/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-auto_update/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-auto_update)|[![quality](https://img.shields.io/ansible/quality/45501)](https://galaxy.ansible.com/robertdebock/auto_update)|[![downloads](https://img.shields.io/ansible/role/d/45501)](https://galaxy.ansible.com/robertdebock/auto_update)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-auto_update.svg)](https://github.com/robertdebock/ansible-role-auto_update/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-auto_update/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-auto_update/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-auto_update/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-auto_update)|[![downloads](https://img.shields.io/ansible/role/d/robertdebock/auto_update)](https://galaxy.ansible.com/robertdebock/auto_update)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-auto_update.svg)](https://github.com/robertdebock/ansible-role-auto_update/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -14,11 +14,11 @@ This example is taken from [`molecule/default/converge.yml`](https://github.com/
 ---
 - name: Converge
   hosts: all
-  become: yes
-  gather_facts: yes
+  become: true
+  gather_facts: true
 
   roles:
-    - role: robertdebock.auto_update
+    - role: ansible-role-auto_update
 ```
 
 The machine needs to be prepared. In CI this is done using [`molecule/default/prepare.yml`](https://github.com/robertdebock/ansible-role-auto_update/blob/master/molecule/default/prepare.yml):
@@ -27,8 +27,8 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
 ---
 - name: Prepare
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
@@ -49,18 +49,18 @@ The default values for the variables are set in [`defaults/main.yml`](https://gi
 auto_update_update_cmd: default
 
 # (RedHat like systems only) Whether a message should be emitted when updates are available, were downloaded, or applied.
-auto_update_message: no
+auto_update_message: false
 
 # (RedHat like systems only) How a message should be emit results of updates. The value is a comma seperated string with
 # with one or more of these choices: email, stdio, motd.
 auto_update_message_emitters: "email, stdio, motd"
 
 # Whether updates should be downloaded when they are available.
-auto_update_download_updates: yes
+auto_update_download_updates: true
 
 # Whether updates should be applied when they are available.  Note
 # that download_updates must also be yes for the update to be applied.
-auto_update_apply_updates: no
+auto_update_apply_updates: false
 
 # Maximum amout of time to randomly sleep, in minutes.
 auto_update_random_sleep: 360
@@ -92,10 +92,10 @@ This role has been tested on these [container images](https://hub.docker.com/u/r
 
 |container|tags|
 |---------|----|
-|[EL](https://hub.docker.com/repository/docker/robertdebock/enterpriselinux/general)|8, 9|
-|[Debian](https://hub.docker.com/repository/docker/robertdebock/debian/general)|all|
-|[Fedora](https://hub.docker.com/repository/docker/robertdebock/fedora/general)|all|
-|[Ubuntu](https://hub.docker.com/repository/docker/robertdebock/ubuntu/general)|all|
+|[EL](https://hub.docker.com/r/robertdebock/enterpriselinux)|9|
+|[Debian](https://hub.docker.com/r/robertdebock/debian)|all|
+|[Fedora](https://hub.docker.com/r/robertdebock/fedora)|all|
+|[Ubuntu](https://hub.docker.com/r/robertdebock/ubuntu)|all|
 
 The minimum version of Ansible required is 2.12, tests have been done to:
 
@@ -103,7 +103,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-auto_update/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-auto_update/issues).
 
 ## [License](#license)
 
