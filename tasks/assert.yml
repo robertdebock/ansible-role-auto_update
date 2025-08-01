@@ -35,4 +35,11 @@
       - auto_update_random_sleep is defined
       - auto_update_random_sleep is number
       - auto_update_random_sleep >= 0
+    quiet: yes
+
+- name: assert | Test if auto_update_message_emitters is set correctly
+  ansible.builtin.assert:
+    that:
+      - auto_update_message_emitters is defined
+      - auto_update_message_emitters is string
     quiet: true

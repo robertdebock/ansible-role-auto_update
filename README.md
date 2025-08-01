@@ -51,6 +51,10 @@ auto_update_update_cmd: default
 # (RedHat like systems only) Whether a message should be emitted when updates are available, were downloaded, or applied.
 auto_update_message: false
 
+# (RedHat like systems only) How a message should be emit results of updates. The value is a comma seperated string with
+# with one or more of these choices: email, stdio, motd.
+auto_update_message_emitters: "email, stdio, motd"
+
 # Whether updates should be downloaded when they are available.
 auto_update_download_updates: true
 
